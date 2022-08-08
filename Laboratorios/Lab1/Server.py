@@ -35,9 +35,19 @@ class Server():
                     client_connection.sendall(response.encode())
 
                 elif (file == "/request"):
-                    response = "\n<p><b>REQUEST REALIZADO: </b></p><p>Direccion del cliente: "+ str(client_address) +"</p>" + response
+                    response = response + "\n<p><b>REQUEST REALIZADO: </b></p><p>Direccion del cliente: "+ str(client_address) +"</p>"
                     for i in request:
                         response =response+"<p>"+i+"</p>"
+                    client_connection.sendall(response.encode())    
+
+                elif (file == "/response"):
+                    response = response + "\n<p><b>RESPONSE A REALIZAR: </b></p>"
+                    response = response + "\n<p>HTTP/1.0 200 OK - version y codigo de respuesta</p>"
+                    response = response + "\n<p>Dom, 7/08/2022 10:01 BGT - Fecha y hora de envio</p>"
+                    response = response + "\n<p>Content-Type:   text/html - tipo de archivo a enviar</p>"
+                    response = response + "\n<p>Content-Length: 1998 - Longitud del archivo a enviar</p>"
+                    response = response + "\n<p>- Espacio reservado para enviar el contenido - </p>"
+                    client_connection.sendall(response.encode())
 
                 elif (file == "/close"):
                     break
