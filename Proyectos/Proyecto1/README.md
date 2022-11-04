@@ -1,5 +1,6 @@
 # ST0263_P1
 Proyecto1 Topicos Especiales en Telematica
+Por: *Juan Camilo Iguaran*, *Rafael Gómez* y *Juan Felipe Martínez*
 
 1. Ubicarse en la carpeta ST0263_P1
 
@@ -45,3 +46,13 @@ Nota: para ver todos los redireccionamientos de la base de datos redistribuida s
 ## Documentacion de endpoints con OpenAPI
 Mientras el servidor corre abrir el navegador y acceder a
 ```host:port/docs```
+
+## Avances 
+
+### Semana 1
+
+Para la primera semana se realizó el almacenamiento monolítico y un cliente que servirá luego también para el modelo distribuido.
+
+### Semana 2
+
+En la segunda semana se trabajó en el modelo distribuido y se mejoro el particionamiento por la clave hash.
