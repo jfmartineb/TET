@@ -25,7 +25,7 @@ class MRDataEmpresas(MRJob):
 
     def reducerSelect(self, company, value):
         if (str(value) == "1"):
-            yield company, 1
+            yield company, None
         
 
 if __name__ == '__main__':
